@@ -1,0 +1,39 @@
+.unit-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: 8px;
+  border: 1px solid var(--color-hairline);
+  background: var(--color-panel);
+  color: var(--color-cloud);
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.unit-toggle:hover:not(:disabled) {
+  border-color: var(--color-accent);
+}
+
+.unit-toggle:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.unit-toggle__option {
+  opacity: 0.4;
+  font-weight: 400;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.unit-toggle__option--active {
+  opacity: 1;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.unit-toggle__divider {
+  opacity: 0.3;
+}

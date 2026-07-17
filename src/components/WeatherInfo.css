@@ -1,0 +1,62 @@
+.weather-info {
+  background: var(--color-plaque-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(var(--color-brass-rgb), 0.4);
+  border-radius: 14px;
+  padding: 1.5rem 1.75rem;
+  color: var(--color-cloud);
+  max-width: 320px;
+}
+
+.weather-info__city {
+  font-family: 'Fraunces', serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0 0 0.35rem 0;
+  text-transform: capitalize;
+}
+
+.weather-info__temp {
+  font-family: 'Space Mono', monospace;
+  font-size: 2.75rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--color-accent);
+  line-height: 1;
+}
+
+.weather-info__description {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  text-transform: capitalize;
+  opacity: 0.8;
+  margin: 0.4rem 0 1rem 0;
+}
+
+.weather-info__details {
+  display: flex;
+  gap: 1.5rem;
+  border-top: 1px solid rgba(var(--color-brass-rgb), 0.25);
+  padding-top: 0.85rem;
+}
+
+.weather-info__detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.weather-info__detail-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-parchment);
+  opacity: 0.55;
+}
+
+.weather-info__detail-value {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.9rem;
+  color: var(--color-parchment);
+}
