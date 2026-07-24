@@ -1,0 +1,104 @@
+.weather-scene {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 28px;
+}
+
+.weather-scene__cloud {
+  animation: drift var(--drift-duration, 30s) linear infinite;
+  animation-delay: var(--drift-delay, 0s);
+}
+
+@keyframes drift {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-900px);
+  }
+}
+
+.weather-scene__rain line {
+  animation: fall 0.6s linear infinite;
+  animation-delay: var(--fall-delay, 0s);
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(500px);
+    opacity: 0.3;
+  }
+}
+
+.weather-scene__snow circle {
+  animation: snowfall 6s linear infinite;
+  animation-delay: var(--fall-delay, 0s);
+}
+
+@keyframes snowfall {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(15px, 250px);
+  }
+
+  100% {
+    transform: translate(-10px, 500px);
+  }
+}
+
+.weather-scene__stars circle {
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 0.9;
+  }
+}
+
+.weather-scene__thunder {
+  opacity: 0;
+  animation: thunder 6s infinite;
+}
+
+@keyframes thunder {
+
+  0%,
+  92%,
+  96%,
+  100% {
+    opacity: 0;
+  }
+
+  93%,
+  95% {
+    opacity: 0.5;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .weather-scene__cloud,
+  .weather-scene__rain line,
+  .weather-scene__snow circle,
+  .weather-scene__stars circle,
+  .weather-scene__thunder {
+    animation: none;
+  }
+}
